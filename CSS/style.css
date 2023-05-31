@@ -1,0 +1,66 @@
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: black;
+  padding: 2px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+  
+}
+
+.button2 {
+  background-color: black; 
+  color: white; 
+  border: 2px solid black;
+}
+
+.button2:hover {
+  background-color: #0070ba;
+  color: FFD700
+}
+  
+.beeonesImage {
+  width : 290px;
+  height : 215px;
+  background-size : cover;
+  margin-left : 1%;
+  position : relative;
+  }  
+  
+.beeonesText {
+  width : 290px;
+  height : 300px;
+  position : relative;
+  left : 10px;
+  }
+  
+.AmoungusImage {
+  width : 290px;
+  height : 215px;
+  position : relative;
+  background-size : cover;
+  margin-left : 1%;
+  }  
+  
+.mathImage {
+  width : 290px;
+  height : 215px;
+  position : relative;
+  background-size : cover;
+  margin-left : 1%;
+  margin-top : 1%'
+  } 
+  
+.connect4Image {
+  width : 290px;
+  height : 215px;
+  position : relative;
+  background-size : cover;
+  margin-left : 1%;
+  } 
