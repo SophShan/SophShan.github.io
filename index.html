@@ -1,200 +1,225 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
-<title>Sophia Shantharupan</title>
-<link rel="icon" href="/docs/assets/Icon.png">
-
+<title>W3.CSS Template</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="CSS/style.css"> 
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+</style>
 </head>
-<body>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="#home" class="w3-bar-item w3-button"><b>SS</b> SOPHIA</a>
-    <!-- Float links to the right. Hide them on small screens -->
-    <div class="w3-right w3-hide-small">
-      <a href="#projects" class="w3-bar-item w3-button">Projects</a>
-      <a href="#details" class="w3-bar-item w3-button">Details</a>
-      <a href="#about" class="w3-bar-item w3-button">About</a>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="/w3images/avatar_g2.jpg" style="width:45%;" class="w3-round"><br><br>
+    <h4><b>SOPHIA SHANTHARUPAN</b></h4>
+    <p class="w3-text-grey">McMaster University CS Student</p>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a> 
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+  </div>
+  <div class="w3-panel w3-large">
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <h1><b>My Portfolio</b></h1>
+    <div class="w3-section w3-bottombar w3-padding-16">
+      <span class="w3-margin-right">Filter:</span> 
+      <button class="w3-button w3-black">ALL</button>
+      <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Design</button>
+      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Photos</button>
+      <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Art</button>
+    </div>
+    </div>
+  </header>
+  
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="/w3images/mountains.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Lorem Ipsum</b></p>
+        <p>This project is a recreation of some of the mini games in the online game, Amoung Us. My primary task in this project was to recreate the Amoung Us Leaf Clean Up task, which is located in the reactor room of the game. Users can travel through different parts of the map by clicking on the room they desire to go to. This map was intentionally designed so that the user can not revisit previous main rooms of the map without making a full circle of the map.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="/w3images/lights.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Lorem Ipsum</b></p>
+        <p>The fourth project presented is a Math Visualizer created for Grade 12 students to develop a greater understanding of vectors and vector operations, with the use of drag and drop features and visual components to help students understand vector concepts. In this project, I primarily worked on the Vector Addition and Dot Product question pages. Furthermore, I developed the template that was used for the Vector Subtraction and Dot Product question pages. This includes the feature that allows the vectors to be dragged and placed in the correct position, as well to receive user input for the user's answer and provide them with the necessary feedback.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="/w3images/nature.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Lorem Ipsum</b></p>
+        <p>The third project is a recreation of game Connect Four and was a personal school project I took on. It was created using Java AWT and provides a graphical user interface that allows its users to choose between and play either a one person or two person game of Connect Four. In the one person version of the game, the user faces randomized moves of the computer.</p>
+      </div>
     </div>
   </div>
-</div>
-
-<!-- Header -->
-<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
-  <img class="w3-image" src="/docs/assets/Screen Shot 2023-01-29 at 7.27.36 PM.png" alt="SophiaName" width="1500" height="800">
-  <div class="w3-display-middle w3-margin-top w3-center">
+  
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="/w3images/p1.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Lorem Ipsum</b></p>
+        <p>This was a website developed in a 5 person team to help enfore the learning and mental math skills of students, starting in kindergarten to grade 5. Each grade provides randomized questions according to the difficulty of the chosen grade.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="/w3images/p2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Lorem Ipsum</b></p>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="/w3images/p3.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container w3-white">
+        <p><b>Lorem Ipsum</b></p>
+        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      </div>
+    </div>
   </div>
-</header>
 
-<!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px;">
 
-  <!-- Project Section -->
-  <div  style="max-height:400px;margin:1px;display:block;">
-  <div class="w3-container w3-padding-32" id="projects">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projects</h3>
-  </div>
+  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+    <h4><b>About Me</b></h4>
+    <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+    <hr>
     
-<div class="achievements">
-      <div class="work">
-        <i class="fas fa-atom"></i>
-        <p class="work-heading">Projects</p>
-        <p class="work-text">I have worked on many projects and I am very proud of them. I am a very good developer and I am always looking for new projects.</p>
-      </div>
-      <div class="work">
-        <i class="fas fa-skiing"></i>
-        <p class="work-heading">Skills</p>
-        <p class="work-text">I have a lot of skills and I am very good at them. I am very good at programming and I am always looking for new skills.</p>
-      </div>
-      <div class="work">
-        <i class="fas fa-ethernet"></i>
-        <p class="work-heading">Network</p>
-        <p class="work-text">I have a lot of network skills and I am very good at them. I am very good at networking and I am always looking for new network skills.</p>
-      </div>
-    </div>
-    
-    
- <div>
-    <img class ="beeonesImage" src="/docs/assets/Screen Shot 2023-01-28 at 10.27.55 PM.png" alt="Created Website" style="top:-15px;position:relative;">
-  <div style="position:relative;left:300px;top:-247px;margin:1%;width:298px;font-size:13px;">
-    <p> This was a website developed in a 5 person team to help enfore the learning and mental math skills of students, starting in kindergarten to grade 5. Each grade provides randomized questions according to the difficulty of the chosen grade. </p>  
-   </div>
-   <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container" style= "position:relative;left:93px; top:-150px;">
-        <button class="button button2"
-        onclick="window.open ('https://beeonesmartie-minutemath.github.io/', '_blank')">
-            View Website
-        </button>
-      </div>
-    </div>
- </div>
-  
-  
- <div>
-    <img class ="AmoungusImage" src="/docs/assets/Screen Shot 2023-03-06 at 10.15.01 PM.png" alt="Created Amoung Us Leaf Game" style="left:306px;top:-378px;position:relative;">
-       <div style="position:relative;left:915px;top:-610px;margin:1%;width:298px;font-size:13px;">
-    <p>  This project is a recreation of some of the mini games in the online game, Amoung Us. My primary task in this project was to recreate the Amoung Us 
-      Leaf Clean Up task, which is located in the reactor room of the game. Users can travel through different parts of the map by clicking on the room 
-      they desire to go to. This map was intentionally designed so that the user can not revisit previous main rooms of the map without making a full circle of the
-      map.  </p>  
-  </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container" style= "position:relative;left:715px; top:-610px;">
-        <button class="button button2"
-        onclick="window.open ('https://cs1xd3.online/ShowModulePublish?modulePublishId=ce15b0f1-ecde-4e7d-b71c-b2bee03278d2&fullscreen=true', '_blank')">
-            View Game
-        </button>
-      </div>
-    </div>
-</div>
- 
-  
-<div>
-    <img class= "connect4Image" src="/docs/assets/ConnectFour.png" alt="Created Connect Four Game" style="top:-548px;left:-305px;position:relative;max-height:500px;">
-  <div style="position:relative;left:300px;top:-780px;margin:1%;width:298px;font-size:13px;">
+    <h4>Technical Skills</h4>
+    <!-- Progress bars / Skills -->
+
+ <span class="w3-tag w3-black w3-small w3-margin-bottom">Java</span> <span class="w3-tag w3-black w3-small w3-margin-bottom">C</span> <span class="w3-tag w3-black w3-small w3-margin-bottom">d</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">DIY</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Family</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Shopping</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span>
+
     <p>
-        The third project is a recreation of game Connect Four and was a personal school project I took on. It was created using Java AWT and provides a graphical user 
-      interface that allows its users to choose between and play either a one person or two person game of Connect Four. In the one person version of the 
-      game, the user faces randomized moves of the computer. 
-    <p>
-  </div>
-  <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container" style= "left:105px; top:-738px;">
-        <button class="button button2"
-        onclick="window.open ('https://github.com/SophShan/Connect-Four', '_blank')">
-            View Code
-        </button>
-      </div>
-    </div>
- </div>
-  
-  <div>
-    <img class="mathImage" src="/docs/assets/mathvisualizer.png" alt="Created math visualizer" style="left:306px;top:-964px;max-height:300px;">
-       <div style="position:relative;left:915px;top:-1197px;margin:1%;width:298px;font-size:13px;">
-    <p>
-        The fourth project presented is a Math Visualizer for created for Grade 12 students to develop a greater understanding of vectors and vectors operations,
-      using application questions, drag and drop features, and visual components to help students understand these concepts. In this project, I primarily worked
-      on the Vector Addition and Dot Product question pages. Furthermore, I developed the template that was used for the Vector Subtraction and Dot Product question 
-      pages. This included the feature to allow the vectors to be dragged and placed in the correct position, as well to receive user input for their answer and provide them
-      with the necessary feedback. 
-    <p>
-  </div>
-    <div class="w3-display-container"  style= "left:685px; top:-1292px;">
-        <button class="button button2"
-        onclick="window.open('https://cs1xd3.online/ShowModulePublish?modulePublishId=b3edb04b-429d-4b62-8fce-205698560009&fullscreen=true','_blank')">
-            View Math Website
-        </button>
-      </div>
- </div>
- 
- </div> 
- <div class="w3-container w3-padding-32" id="about" style="margin:0;max-height:500px" > 
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="max-height:500px;top:-500px;margin:0;">About</h3>
-    <p >I am an undergraduate student pursuing a bachelor's computer science at McMaster University. Some skills of mine include programming in Java, 
-      Python, C, Elm, and Haskell. I also have experience in Bash Shell Scripting as well as writing queries with SQlite3 with Python. Additonally, I 
-      have worked with file input and output with JSON, CSV and Yaml files using Python. 
+      <button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
+        <i class="fa fa-download w3-margin-right"></i>Download Resume
+      </button>
     </p>
-    
+    <hr>
+  
+  
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-large w3-grey">
+    <h4 id="contact"><b>Contact Me</b></h4>
+    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+      <div class="w3-third w3-dark-grey">
+        <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+        <p>email@email.com</p>
+      </div>
+      <div class="w3-third w3-teal">
+        <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+        <p>Chicago, US</p>
+      </div>
+      <div class="w3-third w3-dark-grey">
+        <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+        <p>512312311</p>
+      </div>
+    </div>
+    <hr class="w3-opacity">
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Message</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
+    </form>
   </div>
- <!-- Details Section 
-  <div style="top:-1000px;">
- <div class="w3-container w3-padding-32" id="details" style="top:-1500px;"> 
-   </div>    
-    </div>   
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" >Details</h3>
-    <p > The above first two projects showcase some of the work that I have created in 
-      group environments. The first project listed is a website that provides students from kindergarten to grade 5 with randomized math questions from four 
-      categories, and times how long it takes for them to complete ten questions of the type they have selected. 
-   <br> 
-   <br>  
-    The second project is a recreation of some of the mini games in the online game, Amoung Us. My primary task in this project was to recreate the Amoung Us 
-      Leaf Clean Up task, which is located in the reactor room of the game. Users can travel through different parts of the map by clicking on the room 
-      they desire to go to. This map was intentionally designed so that the user can not revisit previous main rooms of the map without making a full circle of the
-      map. 
-   <br>
-   <br>  
-      The third project is a recreation of game Connect Four and was a personal school project I took on. It was created using Java AWT and provides a graphical user 
-      interface that allows its users to choose between and play either a one person or two person game of Connect Four. In the one person version of the 
-      game, the user faces randomized moves of the computer. 
-    <br>
-    <br>  
-      The fourth project presented is a Math Visualizer for created for Grade 12 students to develop a greater understanding of vectors and vectors operations,
-      using application questions, drag and drop features, and visual components to help students understand these concepts. In this project, I primarily worked
-      on the Vector Addition and Dot Product question pages. Furthermore, I developed the template that was used for the Vector Subtraction and Dot Product question 
-      pages. This included the feature to allow the vectors to be dragged and placed in the correct position, as well to receive user input for their answer and provide them
-      with the necessary feedback. 
-   <br>
-   <br>  
-      This website is also one of my own projects, and uses a HTML and CSS template. This website was created using GitHub.
-    </p>
--->
-    
-  <!-- About Section 
- <div class="w3-container w3-padding-32" id="about" style="margin-top:0;max-height:500px" > 
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16" style="max-height:500px;">About</h3>
-    <p >I am an undergraduate student pursuing a bachelor's computer science at McMaster University. Some skills of mine include programming in Java, 
-      Python, C, Elm, and Haskell. I also have experience in Bash Shell Scripting as well as writing queries with SQlite3 with Python. Additonally, I 
-      have worked with file input and output with JSON, CSV and Yaml files using Python. 
-    </p>
- </div> 
--->
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-dark-grey">
+  <div class="w3-row-padding">
+    <div class="w3-third">
+      <h3>FOOTER</h3>
+      <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  
+    <div class="w3-third">
+      <h3>BLOG POSTS</h3>
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+          <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Lorem</span><br>
+          <span>Sed mattis nunc</span>
+        </li>
+        <li class="w3-padding-16">
+          <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Ipsum</span><br>
+          <span>Praes tinci sed</span>
+        </li> 
+      </ul>
+    </div>
+
+    <div class="w3-third">
+      <h3>SKILLS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-small w3-margin-bottom">Java</span> <span class="w3-tag w3-black w3-small w3-margin-bottom">C</span> <span class="w3-tag w3-black w3-small w3-margin-bottom">d</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">DIY</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Family</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Shopping</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span>
+      </p>
+    </div>
+
+  </div>
+  </footer>
+  
+  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
 
 <!-- End page content -->
 </div>
 
-
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-16" style="top:500px;">
-  <center>
-    <p>Sophia Shantharupan </p>
-  </center>
-</footer>
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
 
 </body>
 </html>
+
