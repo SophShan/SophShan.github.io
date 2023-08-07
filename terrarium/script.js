@@ -63,6 +63,4 @@ function dragElement(terrariumElement) {
 	}
 }
 
-function doubleClick(id) {
-    document.getElementById(id').setAttribute("class", "plantInFront");
-} ondblclick="doubleClick(id)"
+
