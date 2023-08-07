@@ -22,7 +22,6 @@ function dragElement(terrariumElement) {
 	let zindex = 2;
 	
 	terrariumElement.onpointerdown = pointerDrag;
-	terrariumElement.dblclick = moveToFront;
 
 	function pointerDrag(e) {
 		e.preventDefault();
@@ -30,6 +29,11 @@ function dragElement(terrariumElement) {
 		// get the initial mouse cursor position for pos3 and pos4
 		pos3 = e.clientX;
 		pos4 = e.clientY;
+
+		if (e.detail >= 2){
+			console.log ('Item moved to front')
+			terrariumElement.style.class = 'plantInFront'
+		}
 		// when the mouse moves, start the drag
 		document.onpointermove = elementDrag;
 		// when the mouse is lifted, stop the drag
