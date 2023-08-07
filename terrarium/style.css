@@ -23,3 +23,16 @@ h1 {
 	height: 100%;
 	padding: 10px;
 }
+
+.plant-holder {
+	position: relative;
+	height: 13%;
+	left: -10px;
+}
+
+.plant {
+	position: absolute;
+	max-width: 150%;
+	max-height: 150%;
+	z-index: 2;
+}
