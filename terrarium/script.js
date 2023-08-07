@@ -32,7 +32,7 @@ function dragElement(terrariumElement) {
 
 		if (e.detail >= 2){
 			console.log ('Item moved to front')
-			terrariumElement.className = "plantInFront";
+			terrariumElement.style.zindex=zindex += 1;
 		}
 		// when the mouse moves, start the drag
 		document.onpointermove = elementDrag;
