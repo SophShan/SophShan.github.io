@@ -31,7 +31,8 @@ function dragElement(terrariumElement) {
 		pos4 = e.clientY;
 
 		if (e.detail >= 2){
-			console.log ('Item moved to front')
+			console.log ('Item moved to front');
+			console.log (String (parseInt (terrariumElement.style.zindex) + 1));
 			terrariumElement.style.zindex= String (parseInt (terrariumElement.style.zindex) + 1);
 		}
 		// when the mouse moves, start the drag
