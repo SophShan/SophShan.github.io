@@ -19,6 +19,9 @@ function dragElement(terrariumElement) {
 		pos2 = 0,
 		pos3 = 0,
 		pos4 = 0;
+	if (terrariumElement.onpointerdown.clickCount ==2) {
+		clickCount = 2;
+	}
 	terrariumElement.onpointerdown = pointerDrag;
 
 	function pointerDrag(e) {
@@ -31,6 +34,10 @@ function dragElement(terrariumElement) {
 		document.onpointermove = elementDrag;
 		// when the mouse is lifted, stop the drag
 		document.onpointerup = stopElementDrag;
+
+		if (clickCount = 2){
+			console.log('Hello World');
+		}
 	}
 
 	function elementDrag(e) {
@@ -58,4 +65,4 @@ function dragElement(terrariumElement) {
 
 function doubleClick(id) {
     document.getElementById(id').setAttribute("class", "plantInFront");
-}
+} ondblclick="doubleClick(id)"
