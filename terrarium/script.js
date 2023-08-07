@@ -19,6 +19,7 @@ function dragElement(terrariumElement) {
 		pos2 = 0,
 		pos3 = 0,
 		pos4 = 0;
+	let zindex = 2;
 	
 	terrariumElement.onpointerdown = pointerDrag;
 	terrariumElement.dblclick = moveToFront;
@@ -58,6 +59,7 @@ function dragElement(terrariumElement) {
 	}
 
 	function moveToFront () {
+		console.log ('Item move to front')
 		terrariumElement.style.class = 'plantInFront'
 	}
 }
