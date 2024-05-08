@@ -97,10 +97,44 @@ function typeWriter() {
   </div>
 </nav>
 
-<!-- Overlay effect when opening sidebar on small screens -->
+<!-- Overlay effect when opening sidebar on small screens 
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
 -->
+
+<nav id = "navbar" class="topnav">
+  <a class="btn active" href="#home">Home</a>
+  <a class = "btn" href="#projects">Projects</a>
+  <a class = "btn" href="#about">About</a>
+  <a class = "btn" href="#contact">Contact</a>
+</nav>
+
+<style>
+// top background image
+#home {
+    background: url(https://wallpapercave.com/wp/wp11151731.jpg) center/cover no-repeat;
+    padding: 130px 50px 50px 50px;
+    text-align: center;
+    class="active"
+}
+</style>
+
+	
+<section id = "home"  >
+</section>
+
+	
+<script>
+// Add active class to the current button (highlight it)
+var header = document.getElementById("navbar");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+</script>
 	
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:300px">
