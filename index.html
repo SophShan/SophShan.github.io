@@ -101,7 +101,55 @@ function typeWriter() {
 <!-- Overlay effect when opening sidebar on small screens 
 <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 -->
+<style>
 
+
+
+
+.topnav {
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  padding: 3px;
+  transition: all 300ms ease-in-out;
+  z-index: 1;
+}
+
+.topnav a {
+  float: right;
+  color: #000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #91A488;
+  color: white;
+}
+
+.dark {
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    color: var(--color-white);
+    padding: 3px;
+    transition: all 300ms ease-in-out;
+    z-index: 1;
+    
+}
+
+
+</style>
 <nav id = "navbar" class="topnav">
   <a class="btn active" href="#home">Home</a>
   <a class = "btn" href="#projects">Projects</a>
