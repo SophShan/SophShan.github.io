@@ -70,7 +70,7 @@ var speed = 40;
 
 function typeWriter() {
   if (i < txt.length) {
-    document.getElementById("portfolio").innerHTML += txt.charAt(i);
+    document.getElementById("home").innerHTML += txt.charAt(i);
     i++;
     setTimeout(typeWriter, speed);
   }
@@ -162,13 +162,13 @@ function typeWriter() {
   <a class = "btn" href="#contact">Contact</a>
 </nav>
 
-
-	
 <section id = "home"  onload="typeWriter()" >
-	
+ <img src="/docs/assets/sagegreen.jpg" alt="sage green" class="w3-hover-opacity imageClass">
+	<script>
+		typeWriter()
+    	</script>
 </section>
 
- <img src="/docs/assets/sagegreen.jpg" alt="sage green" class="w3-hover-opacity imageClass">
 	
 <script>
 // Add active class to the current button (highlight it)
