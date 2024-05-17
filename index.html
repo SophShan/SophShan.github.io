@@ -14,15 +14,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 // For text on top of image
 .centered {
   position: absolute;
-  z-index: 100;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate( -50%, -50% );
+  text-align: center;
+  color: black;
 }
 
 .headImgContainer {
   position: relative;
-  text-align: center;
+  display: inline-block;
   color: black;
 }
 	
@@ -80,7 +81,7 @@ border: 1px solid black;
 
  <script>
 var i = 0;
-var txt = 'Sophia Shantharupan Portfolio.';
+var txt = '    Sophia Shantharupan Portfolio.';
 var speed = 40;
 
 function typeWriter() {
