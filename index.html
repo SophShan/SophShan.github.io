@@ -84,7 +84,7 @@ var speed = 40;
 
 function typeWriter() {
   if (i < txt.length) {
-    document.getElementById("home").innerHTML += txt.charAt(i);
+    document.getElementById("name").innerHTML += txt.charAt(i);
     i++;
     setTimeout(typeWriter, speed);
   }
@@ -178,10 +178,7 @@ function typeWriter() {
 
 <div class= "headImgContainer" id = "home"  style="height:50%;">
  <img src="/docs/assets/sagegreen.jpg" alt="sage green" class="w3-hover-opacity imageClass" tyle="height:50%;" onload="typeWriter()">
-	<h1 class="centered"> SOPHIA </h1>
-	<style class="centered">
-		typeWriter()
-	</style>
+	<h1 id ="name" class="centered"> SOPHIA </h1>
 </div>
 
 	
