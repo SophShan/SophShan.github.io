@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="../CSS/fishgame.css">
-    <script src="../javascript/fishgame.js" type="text/javascript"></script>
   </head>
 
   
   <body>
     <canvas id="canvas" width="500px" height="500px" onload="animate()"></canvas>
+
+    <!-- must load javascript only after the html so animation can occur in the canvas-->
+    <script src="../javascript/fishgame.js" type="text/javascript"></script>
   </body>
 </html>
