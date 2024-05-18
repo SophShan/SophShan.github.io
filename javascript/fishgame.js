@@ -1,5 +1,7 @@
 // get a refrence to the canvas and its context
 var canvas = document.getElementById("canvas");
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
 var ctx = canvas.getContext("2d");
 
 // newly spawned objects start at Y=25
