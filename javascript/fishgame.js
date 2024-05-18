@@ -21,7 +21,7 @@ var objects = [];
 var startTime = Date.now();
 
 // start animating
-animate();
+//animate();
 
 
 function spawnRandomObject() {
