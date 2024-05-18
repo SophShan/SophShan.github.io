@@ -21,7 +21,7 @@
 
   
   <body>
-    <canvas id="canvas" width="100%px" height="100%px"></canvas>
+    <canvas id="canvas" width="300px" height="300px"></canvas>
 
     <script>
 var canvas = document.getElementById("canvas");
@@ -101,11 +101,12 @@ function animate() {
     // redrawn in new positions
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // draw the line where new objects are spawned
+    /* draw the line where new objects are spawned
     ctx.beginPath();
     ctx.moveTo(0, spawnLineY); // starting position of line
     ctx.lineTo(canvas.width, spawnLineY); // ending position of line
     ctx.stroke();
+    */
 
     // move each object down the canvas
     for (var i = 0; i < objects.length; i++) {
