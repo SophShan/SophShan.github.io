@@ -14,14 +14,14 @@
     }
     
     #canvas {
-        border:50px solid red;
+        border:5px solid red;
     }
     
   </style>
 
   
   <body>
-    <canvas id="canvas" width="1000px" height="1000px"></canvas>
+    <canvas id="canvas" width="100%px" height="100%px"></canvas>
 
     <script>
 var canvas = document.getElementById("canvas");
@@ -73,7 +73,7 @@ function spawnRandomObject() {
         // set x randomly but at least 15px off the canvas edges
         x: Math.random() * (canvas.width - 30) + 15,
         // set y to start on the line where objects are spawned
-        y: spawnLineY,
+        y: Math.random() * (canvas.width - 30) + 15,
     }
 
     // add the new object to the objects[] array
