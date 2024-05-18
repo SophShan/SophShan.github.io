@@ -24,7 +24,6 @@
     <canvas id="canvas" width="1000px" height="1000px"></canvas>
 
     <script>
-    // get a refrence to the canvas and its context
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
@@ -74,7 +73,7 @@ function spawnRandomObject() {
         // set x randomly but at least 15px off the canvas edges
         x: Math.random() * (canvas.width - 30) + 15,
         // set y to start on the line where objects are spawned
-        y: Math.random() * (canvas.width - 30) + 15,
+        y: spawnLineY,
     }
 
     // add the new object to the objects[] array
@@ -106,21 +105,21 @@ function animate() {
     ctx.beginPath();
     ctx.moveTo(0, spawnLineY); // starting position of line
     ctx.lineTo(canvas.width, spawnLineY); // ending position of line
-   ctx.stroke();
+    ctx.stroke();
 
     // move each object down the canvas
     for (var i = 0; i < objects.length; i++) {
         var object = objects[i];
         object.y += spawnRateOfDescent;
         ctx.beginPath();
-        ctx.arc(object.x, object.y, 8, 0, Math.PI * 2); // (x, y, 
-diameter, startAngle, endAngle)
+        ctx.arc(object.x, object.y, 8, 0, Math.PI * 2);
         ctx.closePath();
         ctx.fillStyle = object.type;
         ctx.fill(); // need to fill to see the object
     }
 
 }
+
   </script>
   </body>
 </html>
