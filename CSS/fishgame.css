@@ -4,10 +4,10 @@ body {
     
 #canvas {
     border:5px solid red;
-    display: block;
+    //display: block;
     padding: 0;
     margin: auto;
-    display: block;
+    //display: block;
     position: absolute;
     top: 0;
     bottom: 0;
