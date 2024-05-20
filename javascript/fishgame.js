@@ -36,7 +36,8 @@ function spawnRandomObject() {
 
     if (Math.random() < 0.50) {
         t = "red";
-    } else {
+    } 
+    else {
         t = "blue";
     }
 
@@ -48,6 +49,25 @@ function spawnRandomObject() {
         x: Math.random() * (canvas.width - 30) + 15,
         // set y to start on the line where objects are spawned
         y: Math.random() * (canvas.width - 30) + 15,
+
+        xspeed: Math.random(),
+        yspeed: Math.random(),
+
+        // determines if object moves left or right
+        if (xspeed < 0.50){
+            xspeed: xspeed*-1;
+        }
+        else {
+            xspeed: xspeed*-1;
+        }
+
+        // determines if object moves up or down
+        if (xspeed < 0.50){
+            xspeed: xspeed*-1;
+        }
+        else {
+            xspeed: xspeed*-1;
+        }
     }
 
     // add the new object to the objects[] array
@@ -86,13 +106,8 @@ function startanimate() {
     for (var i = 0; i < objects.length; i++) {
         var object = objects[i];
 
-        // set how fast the objects will fall
-        var spawnRateOfDescent = Math.random();
-        
-        // object will move horizontally and vertically at different rates
-        var spawnRateOfX = Math.random()
-        object.y += spawnRateOfDescent;
-        object.x += spawnRateOfX;
+        object.y += object.yspeed;
+        object.x += object.xspeed;
         
         ctx.beginPath();
         ctx.arc(object.x, object.y, 8, 0, Math.PI * 2);
