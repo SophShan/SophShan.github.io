@@ -10,9 +10,6 @@ var spawnLineY = 25;
 // spawn a new object every 1500ms
 var spawnRate = 1500;
 
-// set how fast the objects will fall
-var spawnRateOfDescent = 0.50;
-
 // when was the last object spawned
 var lastSpawn = -1;
 
@@ -88,11 +85,15 @@ function startanimate() {
     // move each object down the canvas
     for (var i = 0; i < objects.length; i++) {
         var object = objects[i];
-        object.y += spawnRateOfDescent;
+
+        // set how fast the objects will fall
+        var spawnRateOfDescent = Math.random();
         
-        // object will move horizontally at different rate
+        // object will move horizontally and vertically at different rates
         var spawnRateOfX = Math.random()
+        object.y += spawnRateOfDescent;
         object.x += spawnRateOfX;
+        
         ctx.beginPath();
         ctx.arc(object.x, object.y, 8, 0, Math.PI * 2);
         ctx.closePath();
