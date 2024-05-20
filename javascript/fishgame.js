@@ -89,6 +89,10 @@ function startanimate() {
     for (var i = 0; i < objects.length; i++) {
         var object = objects[i];
         object.y += spawnRateOfDescent;
+        
+        // object will move horizontally at different rate
+        var spawnRateOfX = Math.random()
+        object.x += spawnRateOfX;
         ctx.beginPath();
         ctx.arc(object.x, object.y, 8, 0, Math.PI * 2);
         ctx.closePath();
