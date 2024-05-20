@@ -72,7 +72,7 @@ function startanimate() {
     }
 
     // request another animation frame
-    requestAnimationFrame(animate);
+    requestAnimationFrame(startanimate);
 
     // clear the canvas so all objects can be 
     // redrawn in new positions
