@@ -59,7 +59,7 @@ function spawnRandomObject() {
 
 
 
-function animate() {
+function startanimate() {
 
     // get the elapsed time
     var time = Date.now();
