@@ -56,23 +56,23 @@ function spawnRandomObject() {
 
     // set spawn coordinates so they spawn at the edges using previous x to randomly choose where along edges they spawn
     // 4 situtations
-    if (x < 0.50){
-        if (y < 0.5){
-            x = 0; // along left edge
+    if (object.x < 0.50){
+        if (object.y < 0.5){
+            object.x = 0; // along left edge
         }
         else {
-            x = canvas.width; // along right edge
+            object.x = canvas.width; // along right edge
         }
-        y = Math.random() * (canvas.width - 300) + 15;
+        object.y = Math.random() * (canvas.width - 300) + 15;
     }
     else {
-        if (y >= 0.5){
-            y = 0; // along bottom edge
+        if (object.y >= 0.5){
+            object.y = 0; // along bottom edge
         }
         else {
-            y = canvas.height; // along top edge
+            object.y = canvas.height; // along top edge
         }
-        x = Math.random() * (canvas.width - 300) + 15;
+        object.x = Math.random() * (canvas.width - 300) + 15;
     }
 
     
