@@ -55,40 +55,28 @@ function spawnRandomObject() {
 
         diameter: Math.ceil (Math.random()*9+0.1),
     }
-
+    
     // set spawn coordinates so they spawn at the edges using previous x to randomly choose where along edges they spawn
     // 4 situtations
     if (object.x < 0.50){
         if (object.y < 0.5){
-            object.x = 0; // along left edge
+            object.x = 0; // along left edge and already moving to the right
         }
         else {
             object.x = canvas.width; // along right edge
+            object.xspeed = object.xspeed*-1; // should move towards left
         }
         object.y = Math.random() * (canvas.width - 300) + 15;
     }
     else {
         if (object.y >= 0.5){
-            object.y = 0; // along bottom edge
+            object.y = 0; // along top edge and already moving down
         }
         else {
-            object.y = canvas.height; // along top edge
+            object.y = canvas.height; // along bottom edge
+            object.yspeed = object.yspeed*-1; // should move down
         }
         object.x = Math.random() * (canvas.width - 300) + 15;
-    }
-
-    
-    // determines if object moves left or right
-    var xneg = Math.random();
-    var yneg = Math.random();
-    
-    if (xneg < 0.50){
-        object.xspeed = object.xspeed*-1;
-    }
-
-    // determines if object moves up or down
-    if (yneg < 0.50){
-        object.yspeed = object.yspeed*-1;
     }
 
     // add the new object to the objects[] array
