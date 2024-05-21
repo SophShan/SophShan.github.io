@@ -8,7 +8,7 @@ var ctx = canvas.getContext("2d");
 var spawnLineY = 25;
 
 // spawn a new object every 1500ms
-var spawnRate = 3000;
+var spawnRate = 9000;
 
 // when was the last object spawned
 var lastSpawn = -1;
@@ -48,10 +48,10 @@ function spawnRandomObject() {
         // set spawn randomly on the canvas edge
         x: Math.random(),
         // set y to start on the line where objects are spawned
-        y: Math.random() * (canvas.width - 300) + 15,
+        y: Math.random(),
 
-        xspeed: Math.random()*2,
-        yspeed: Math.random()*2,
+        xspeed: Math.random()*4,
+        yspeed: Math.random()*4,
     }
 
     // set spawn coordinates so they spawn at the edges using previous x to randomly choose where along edges they spawn
