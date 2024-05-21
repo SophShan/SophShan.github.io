@@ -53,7 +53,7 @@ function spawnRandomObject() {
         xspeed: Math.random()*4 + 0.1,
         yspeed: Math.random()*4 +0.1,
 
-        diameter: Math.ceil (getRandomInt(10)+1),
+        diameter: Math.ceil (Math.random()*9+0.1),
     }
 
     // set spawn coordinates so they spawn at the edges using previous x to randomly choose where along edges they spawn
