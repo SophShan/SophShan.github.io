@@ -45,10 +45,10 @@ function spawnRandomObject() {
     var object = {
         // set this objects type
         type: t,
-        // set x randomly but at least 15px off the canvas edges
-        x: Math.random() * (canvas.width - 30) + 15,
+        // set spawn randomly on the canvas edge
+        x: Math.random() * (canvas.width -300),
         // set y to start on the line where objects are spawned
-        y: Math.random() * (canvas.width - 30) + 15,
+        y: Math.random() * (canvas.width - 300) + 15,
 
         xspeed: Math.random(),
         yspeed: Math.random(),
