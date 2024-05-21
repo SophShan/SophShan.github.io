@@ -65,6 +65,7 @@ function spawnRandomObject() {
     // determines if object moves up or down
     if (yneg < 0.50){
         object.yspeed = object.yspeed*-1;
+    }
 
     // add the new object to the objects[] array
     objects.push(object);
