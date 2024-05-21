@@ -55,20 +55,16 @@ function spawnRandomObject() {
     }
 
     // determines if object moves left or right
-    if (object.xspeed < 0.50){
-        object.xspeed: object.xspeed*-1;
-    }
-    else {
-        object.xspeed: object.xspeed*-1;
+    var xneg = Math.random();
+    var yneg = Math.random();
+    
+    if (xneg < 0.50){
+        object.xspeed = object.xspeed*-1;
     }
 
     // determines if object moves up or down
-    if (object.yspeed < 0.50){
-        object.yspeed: object.ypeed*-1;
-    }
-    else {
-        object.yspeed: object.yspeed*-1;
-    }
+    if (yneg < 0.50){
+        object.yspeed = object.yspeed*-1;
 
     // add the new object to the objects[] array
     objects.push(object);
