@@ -52,22 +52,22 @@ function spawnRandomObject() {
 
         xspeed: Math.random(),
         yspeed: Math.random(),
+    }
 
-        // determines if object moves left or right
-        if (xspeed < 0.50){
-            xspeed: xspeed*-1;
-        }
-        else {
-            xspeed: xspeed*-1;
-        }
+    // determines if object moves left or right
+    if (xspeed < 0.50){
+        xspeed: xspeed*-1;
+    }
+    else {
+        xspeed: xspeed*-1;
+    }
 
-        // determines if object moves up or down
-        if (xspeed < 0.50){
-            xspeed: xspeed*-1;
-        }
-        else {
-            xspeed: xspeed*-1;
-        }
+    // determines if object moves up or down
+    if (xspeed < 0.50){
+        xspeed: xspeed*-1;
+    }
+    else {
+        xspeed: xspeed*-1;
     }
 
     // add the new object to the objects[] array
