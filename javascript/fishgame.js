@@ -19,6 +19,8 @@ var objects = [];
 // save the starting time (used to calc elapsed time)
 var startTime = Date.now();
 
+var objcount = -1;
+
 // start animating
 //animate();
 
@@ -54,6 +56,8 @@ function spawnRandomObject() {
         yspeed: Math.random()*3.5 +0.5,
 
         diameter: Math.ceil (Math.random()*29+1),
+
+        id: "objId" + objcount.toString(),
     }
     
     // set spawn coordinates so they spawn at the edges using previous x to randomly choose where along edges they spawn
@@ -128,10 +132,13 @@ function startanimate() {
         ctx.fill(); // need to fill to see the object
 
         // see if the mouse touches object
-        var objListener = document.querySelector ('object');
-        images.addEventListener('mouseover', change);
+        //var objListener = document.querySelector ('object');
+        //images.addEventListener('mouseover', change);
+        
 
-        //if (object.x - )
+        if ((object.x - mouseX) <= 0.1 ){
+            console.log ("HEELOOO");
+        }
     }
 
 }
