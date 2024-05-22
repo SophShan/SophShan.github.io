@@ -74,20 +74,20 @@ function spawnRandomObject() {
     // 4 situtations
     if (object.x < 0.50){
         if (object.y < 0.5){
-            object.x = 0; // along left edge and already moving to the right
+            object.x = -5; // along left edge and already moving to the right
         }
         else {
-            object.x = canvas.width; // along right edge
+            object.x = canvas.width + 5; // along right edge
             object.xspeed = object.xspeed*-1; // should move towards left
         }
         object.y = Math.random() * (canvas.width - 300) + 15;
     }
     else {
         if (object.y >= 0.5){
-            object.y = 0; // along top edge and already moving down
+            object.y = -5; // along top edge and already moving down
         }
         else {
-            object.y = canvas.height; // along bottom edge
+            object.y = canvas.height + 5; // along bottom edge
             object.yspeed = object.yspeed*-1; // should move down
         }
         object.x = Math.random() * (canvas.width - 300) + 15;
