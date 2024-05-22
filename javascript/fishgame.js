@@ -92,7 +92,7 @@ function change (event){
     console.log ("IT WORKS");
 }
 
-function startanimate() {
+function startanimate(event) {
 
     // get the elapsed time
     var time = Date.now();
@@ -134,7 +134,9 @@ function startanimate() {
         // see if the mouse touches object
         //var objListener = document.querySelector ('object');
         //images.addEventListener('mouseover', change);
-        
+
+        let mouseX = event.clientX;
+        let mouseY = event.clientY;
 
         if ((object.x - mouseX) <= 0.5 ){
             console.log ("HEELOOO");
