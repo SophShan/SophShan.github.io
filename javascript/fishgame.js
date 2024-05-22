@@ -151,7 +151,7 @@ function startanimate() {
         //var objListener = document.querySelector ('object');
         //images.addEventListener('mouseover', change);
 
-        if (Math.abs(object.x - mouseX) <= object.diameter && Math.abs(object.y - mouseY) <= object.diameter){
+        if ((Math.abs(object.x - mouseX) <= object.diameter) && (Math.abs(object.y - mouseY) <= object.diameter)){
             console.log ("HEELOOO");
             object.diameter = 0;
         }
