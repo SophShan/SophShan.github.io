@@ -50,8 +50,8 @@ function spawnRandomObject() {
         // set y to start on the line where objects are spawned
         y: Math.random(),
 
-        xspeed: Math.random()*4 + 0.1,
-        yspeed: Math.random()*4 +0.1,
+        xspeed: Math.random()*3.5 + 0.5,
+        yspeed: Math.random()*3.5 +0.5,
 
         diameter: Math.ceil (Math.random()*29+0.5),
     }
