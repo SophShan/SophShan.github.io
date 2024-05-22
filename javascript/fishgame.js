@@ -8,7 +8,7 @@ var ctx = canvas.getContext("2d");
 var spawnLineY = 25;
 
 // spawn a new object every 500ms
-var spawnRate = 500;
+var spawnRate = 200;
 
 // when was the last object spawned
 var lastSpawn = -1;
