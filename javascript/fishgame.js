@@ -7,8 +7,8 @@ var ctx = canvas.getContext("2d");
 // newly spawned objects start at Y=25
 var spawnLineY = 25;
 
-// spawn a new object every 1500ms
-var spawnRate = 1500;
+// spawn a new object every 500ms
+var spawnRate = 500;
 
 // when was the last object spawned
 var lastSpawn = -1;
@@ -119,7 +119,7 @@ function startanimate() {
         object.x += object.xspeed;
         
         ctx.beginPath();
-        ctx.arc(object.x, object.y, 8, 0, Math.PI * 2);
+        ctx.arc(object.x, object.y, object.diameter, 0, Math.PI * 2);
         ctx.closePath();
         ctx.fillStyle = object.type;
         ctx.fill(); // need to fill to see the object
