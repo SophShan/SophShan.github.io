@@ -136,8 +136,9 @@ function startanimate() {
         //images.addEventListener('mouseover', change);
         
 
-        if ((object.x - mouseX) <= 0.1 ){
+        if ((object.x - mouseX) <= 0.5 ){
             console.log ("HEELOOO");
+            object.diameter = 0;
         }
     }
 
