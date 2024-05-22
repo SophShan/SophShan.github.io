@@ -45,12 +45,18 @@ function spawnRandomObject() {
     // between 0-1. So to randomly decide if the next object
     // will be A or B, we say if the random# is 0-.49 we
     // create A and if the random# is .50-1.00 we create B
-
-    if (Math.random() < 0.50) {
-        t = "red";
+    var temp = Math.random()
+    if (temp < 0.25) {
+        t = "green";
     } 
-    else {
+    else if (temp >= 0.25 && temp < 0.5) {
         t = "blue";
+    }
+    else if (temp >= 0.5 && temp < 0.75) {
+        t = "purple";
+    }
+    else {
+        t = "pink";
     }
 
     // create the new object
