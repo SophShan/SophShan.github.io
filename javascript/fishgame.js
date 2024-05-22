@@ -102,7 +102,7 @@ function change (event){
     console.log ("IT WORKS");
 }
 
-function startanimate(event) {
+function startanimate() {
 
     // get the elapsed time
     var time = Date.now();
@@ -145,7 +145,7 @@ function startanimate(event) {
         //var objListener = document.querySelector ('object');
         //images.addEventListener('mouseover', change);
 
-        if ((object.x - mouseX) <= 0.5 ){
+        if ((object.x - mouseX) <= object.diameter && (object.y - mouseY) <= object.diameter){
             console.log ("HEELOOO");
             object.diameter = 0;
         }
