@@ -123,6 +123,9 @@ function startanimate() {
         ctx.closePath();
         ctx.fillStyle = object.type;
         ctx.fill(); // need to fill to see the object
+
+        // see if the mouse touches object
+        //if (object.x - )
     }
 
 }
