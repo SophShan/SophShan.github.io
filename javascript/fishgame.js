@@ -21,6 +21,16 @@ var startTime = Date.now();
 
 var objcount = -1;
 
+var mouseX = 0;
+
+var mouseY = 0;
+
+function trackMouse (event) {
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+}
+    
+
 // start animating
 //animate();
 
@@ -134,9 +144,6 @@ function startanimate(event) {
         // see if the mouse touches object
         //var objListener = document.querySelector ('object');
         //images.addEventListener('mouseover', change);
-
-        let mouseX = event.clientX;
-        let mouseY = event.clientY;
 
         if ((object.x - mouseX) <= 0.5 ){
             console.log ("HEELOOO");
