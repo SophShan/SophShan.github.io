@@ -171,7 +171,7 @@ function startanimate() {
     // This should happen before the objects are moved and drawn. 
     objects = objects.filter(object => {
         // Don't divide by 2, as "radius" is actually the radius
-        return !( object.radius < player.radius 
+        return !( //object.radius < player.radius 
                  && (Math.abs(object.x - mouseX) <= object.radius) 
                  && (Math.abs(object.y - mouseY) <= object.radius));
     });
@@ -186,6 +186,10 @@ function startanimate() {
         ctx.fillStyle = object.type;
         ctx.fill();
     }
-        
+        ctx.beginPath();
+        ctx.arc(player.x, player.y, player.radius, 0, Math.PI * 2);
+        ctx.closePath();
+        ctx.fillStyle = player.type;
+        ctx.fill();
     }
 
