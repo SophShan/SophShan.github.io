@@ -38,7 +38,7 @@ function trackMouse (event) {
     
 
 // start animating
-//animate();
+animate();
 
 
 function spawnRandomObject() {
