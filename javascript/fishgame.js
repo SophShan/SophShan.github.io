@@ -26,8 +26,14 @@ var mouseX = 0;
 var mouseY = 0;
 
 function trackMouse (event) {
-    mouseX = event.clientX;
-    mouseY = event.clientY;
+    //mouseX = event.clientX;
+    //mouseY = event.clientY;
+    objects.forEach (object, i) => {
+        if ((Math.abs(object.x - event.clientX) <= object.diameter/2) && (Math.abs(object.y - event.clientY) <= object.diameter/2)) {
+            setTimeout (() => { objects.splice (i, 1) }, 0)
+        }
+
+    }
 }
     
 
@@ -141,10 +147,11 @@ function startanimate() {
         ctx.fillStyle = object.type;
         ctx.fill(); // need to fill to see the object
 
-
+        /*
         if ((Math.abs(object.x - mouseX) <= object.diameter/2) && (Math.abs(object.y - mouseY) <= object.diameter/2)){
             console.log ("HELLO");
             object.diameter = 0;
+        */
         }
     }
 
