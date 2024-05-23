@@ -32,7 +32,7 @@ var player = {
         
         y: mouseY,
 
-        diameter: 5,
+        radius: 6,
     }
 
 /*
@@ -40,7 +40,7 @@ function trackMouse (event) {
     //mouseX = event.clientX;
     //mouseY = event.clientY;
     objects.forEach ((object, i) => {
-        if ((Math.abs(object.x - event.clientX) <= object.diameter) && (Math.abs(object.y - event.clientY) <= object.diameter)) {
+        if ((Math.abs(object.x - event.clientX) <= object.radius) && (Math.abs(object.y - event.clientY) <= object.radius)) {
             setTimeout (() => { objects.splice (i, 1) }, 0)
         }
 
@@ -92,7 +92,7 @@ function spawnRandomObject() {
         xspeed: Math.random()*3.5 + 0.5,
         yspeed: Math.random()*3.5 +0.5,
 
-        diameter: Math.ceil (Math.random()*39+3),
+        radius: Math.ceil (Math.random()*39+3),
     }
     
     // set spawn coordinates so they spawn at the edges using previous x to randomly choose where along edges they spawn
@@ -160,7 +160,7 @@ function startanimate() {
         object.x += object.xspeed;
         
         ctx.beginPath();
-        ctx.arc(object.x, object.y, object.diameter, 0, Math.PI * 2);
+        ctx.arc(object.x, object.y, object.radius, 0, Math.PI * 2);
         ctx.closePath();
         ctx.fillStyle = object.type;
         ctx.fill(); // need to fill to see the object
@@ -170,8 +170,10 @@ function startanimate() {
     // Use filter method to remove objects that are touched:
     // This should happen before the objects are moved and drawn. 
     objects = objects.filter(object => {
-        // Don't divide by 2, as "diameter" is actually the radius
-        return !((Math.abs(object.x - mouseX) <= object.diameter) && (Math.abs(object.y - mouseY) <= object.diameter));
+        // Don't divide by 2, as "radius" is actually the radius
+        return !( object.radius < player.radius 
+                 && (Math.abs(object.x - mouseX) <= object.radius) 
+                 && (Math.abs(object.y - mouseY) <= object.radius));
     });
 
     for (const object of objects) { // Use modern for..of syntax (no need for i)
@@ -179,7 +181,7 @@ function startanimate() {
         object.x += object.xspeed;
         
         ctx.beginPath();
-        ctx.arc(object.x, object.y, object.diameter, 0, Math.PI * 2);
+        ctx.arc(object.x, object.y, object.radius, 0, Math.PI * 2);
         ctx.closePath();
         ctx.fillStyle = object.type;
         ctx.fill();
