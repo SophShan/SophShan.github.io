@@ -104,10 +104,6 @@ function spawnRandomObject() {
     objects.push(object);
 }
 
-function change (event){
-    //event.target.cl
-    console.log ("IT WORKS");
-}
 
 function startanimate() {
 
