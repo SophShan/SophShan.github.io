@@ -165,13 +165,16 @@ function startanimate() {
         ctx.fillStyle = object.type;
         ctx.fill(); // need to fill to see the object
         */
-
     
     // Use filter method to remove objects that are touched:
     // This should happen before the objects are moved and drawn. 
     // below needs to be in the animate function so that the check is made at every animation frame, not just when mouse moves
     objects = objects.filter(object => {
-        player.radius += object.radius/20 + 1;
+        if (object.radius < player.radius) && (Math.abs(object.x - mouseX) <= object.radius) 
+                 && (Math.abs(object.y - mouseY) <= object.radius)
+        {
+            player.radius += object.radius/20 + 1;
+        }
         return !( object.radius < player.radius
                  && (Math.abs(object.x - mouseX) <= object.radius) 
                  && (Math.abs(object.y - mouseY) <= object.radius));
