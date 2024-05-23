@@ -26,8 +26,14 @@ var mouseX = 0;
 var mouseY = 0;
 
 // Initialize player circle that sticks to mouse
+var player = {
+        type: "yellow",
+        x: mouseX,
+        
+        y: mouseY,
 
-
+        diameter: 5,
+    }
 
 /*
 function trackMouse (event) {
@@ -118,6 +124,10 @@ function spawnRandomObject() {
 
 
 function startanimate() {
+
+    // Update player circle
+    player.x = mouseX;
+    player.y = mouseY;
 
     // get the elapsed time
     var time = Date.now();
