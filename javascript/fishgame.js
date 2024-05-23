@@ -33,7 +33,7 @@ function trackMouse (event) {
             setTimeout (() => { objects.splice (i, 1) }, 0)
         }
 
-    })
+    });
 }
     
 
