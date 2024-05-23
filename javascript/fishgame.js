@@ -23,8 +23,7 @@ var objcount = -1;
 
 var mouseX = 0;
 
-var mouseY = 0;
-
+var mouseY = 0;/*
 function trackMouse (event) {
     //mouseX = event.clientX;
     //mouseY = event.clientY;
@@ -34,7 +33,7 @@ function trackMouse (event) {
         }
 
     })
-}
+}*/
     
 
 // start animating
