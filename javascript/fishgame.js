@@ -25,6 +25,7 @@ var mouseX = 0;
 
 var mouseY = 0;
 
+/*
 function trackMouse (event) {
     //mouseX = event.clientX;
     //mouseY = event.clientY;
@@ -34,9 +35,15 @@ function trackMouse (event) {
         }
 
     });
-}
+} */
+
+// Enable this function:
+function trackMouse(event) {
+    // Need to subtract the coordinates of the canvas
+    mouseX = event.clientX - canvas.offsetLeft; 
+    mouseY = event.clientY - canvas.offsetTop;
+    // No need to perform the "collision" check here.
     
-f
 // start animating
 startanimate();
 
@@ -130,7 +137,7 @@ function startanimate() {
     ctx.stroke();
     didnt need a line*/
 
-    // move each object down the canvas
+    /* move each object down the canvas
     for (var i = 0; i < objects.length; i++) {
         var object = objects[i];
 
@@ -142,6 +149,7 @@ function startanimate() {
         ctx.closePath();
         ctx.fillStyle = object.type;
         ctx.fill(); // need to fill to see the object
+        */
 
         /*
         if ((Math.abs(object.x - mouseX) <= object.diameter/2) && (Math.abs(object.y - mouseY) <= object.diameter/2)){
@@ -149,6 +157,24 @@ function startanimate() {
             object.diameter = 0;
         }
         */
+    
+    // Use filter method to remove objects that are touched:
+    // This should happen before the objects are moved and drawn. 
+    objects = objects.filter(object => {
+        // Don't divide by 2, as "diameter" is actually the radius
+        return !((Math.abs(object.x - mouseX) <= object.diameter) && (Math.abs(object.y - mouseY) <= object.diameter));
+    });
+
+    for (const object of objects) { // Use modern for..of syntax (no need for i)
+        object.y += object.yspeed;
+        object.x += object.xspeed;
+        
+        ctx.beginPath();
+        ctx.arc(object.x, object.y, object.diameter, 0, Math.PI * 2);
+        ctx.closePath();
+        ctx.fillStyle = object.type;
+        ctx.fill();
+    }
         
     }
 
