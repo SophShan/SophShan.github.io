@@ -28,9 +28,9 @@ var mouseY = 0;
 // Initialize player circle that sticks to mouse
 var player = {
         type: "yellow",
-        x: mouseX,
+        x: 0,
         
-        y: mouseY,
+        y: 0,
 
         radius: 7,
     }
