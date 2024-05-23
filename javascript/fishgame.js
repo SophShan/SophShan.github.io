@@ -82,7 +82,7 @@ function spawnRandomObject() {
         xspeed: Math.random()*3.5 + 0.5,
         yspeed: Math.random()*3.5 +0.5,
 
-        diameter: Math.ceil (Math.random()*29+1),
+        diameter: Math.ceil (Math.random()*39+3),
     }
     
     // set spawn coordinates so they spawn at the edges using previous x to randomly choose where along edges they spawn
@@ -138,7 +138,7 @@ function startanimate() {
     ctx.stroke();
     didnt need a line*/
 
-    /* move each object down the canvas
+    /* move each object down the canvas OLD CODE
     for (var i = 0; i < objects.length; i++) {
         var object = objects[i];
 
@@ -152,12 +152,6 @@ function startanimate() {
         ctx.fill(); // need to fill to see the object
         */
 
-        /*
-        if ((Math.abs(object.x - mouseX) <= object.diameter/2) && (Math.abs(object.y - mouseY) <= object.diameter/2)){
-            console.log ("HELLO");
-            object.diameter = 0;
-        }
-        */
     
     // Use filter method to remove objects that are touched:
     // This should happen before the objects are moved and drawn. 
