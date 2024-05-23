@@ -146,8 +146,9 @@ function startanimate() {
         if ((Math.abs(object.x - mouseX) <= object.diameter/2) && (Math.abs(object.y - mouseY) <= object.diameter/2)){
             console.log ("HELLO");
             object.diameter = 0;
-        */
         }
+        */
+        
     }
 
 }
