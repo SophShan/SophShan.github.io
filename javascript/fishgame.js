@@ -141,9 +141,6 @@ function startanimate() {
         ctx.fillStyle = object.type;
         ctx.fill(); // need to fill to see the object
 
-        // see if the mouse touches object
-        //var objListener = document.querySelector ('object');
-        //images.addEventListener('mouseover', change);
 
         if ((Math.abs(object.x - mouseX) <= object.diameter/2) && (Math.abs(object.y - mouseY) <= object.diameter/2)){
             console.log ("HELLO");
