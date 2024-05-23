@@ -41,10 +41,7 @@ function spawnRandomObject() {
     var t;
 
     // About Math.random()
-    // Math.random() generates a semi-random number
-    // between 0-1. So to randomly decide if the next object
-    // will be A or B, we say if the random# is 0-.49 we
-    // create A and if the random# is .50-1.00 we create B
+    // Math.random() generates a semi-random number between 0-1. 
     var temp = Math.random()
     if (temp < 0.25) {
         t = "green";
@@ -72,8 +69,6 @@ function spawnRandomObject() {
         yspeed: Math.random()*3.5 +0.5,
 
         diameter: Math.ceil (Math.random()*29+1),
-
-        id: "objId" + objcount.toString(),
     }
     
     // set spawn coordinates so they spawn at the edges using previous x to randomly choose where along edges they spawn
@@ -123,8 +118,7 @@ function startanimate() {
     // request another animation frame
     requestAnimationFrame(startanimate);
 
-    // clear the canvas so all objects can be 
-    // redrawn in new positions
+    // clear the canvas so all objects can be redrawn in new positions
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     /* draw the line where new objects are spawned
@@ -132,7 +126,7 @@ function startanimate() {
     ctx.moveTo(0, spawnLineY); // starting position of line
     ctx.lineTo(canvas.width, spawnLineY); // ending position of line
     ctx.stroke();
-    */
+    didnt need a line*/
 
     // move each object down the canvas
     for (var i = 0; i < objects.length; i++) {
@@ -151,8 +145,8 @@ function startanimate() {
         //var objListener = document.querySelector ('object');
         //images.addEventListener('mouseover', change);
 
-        if (((object.x - mouseX) <= object.diameter/2) && ((object.y - mouseY) <= object.diameter/2)){
-            console.log ("HEELOOO");
+        if ((Math.abs(object.x - mouseX) <= object.diameter/2) && (Math.abs(object.y - mouseY) <= object.diameter/2)){
+            console.log ("HELLO");
             object.diameter = 0;
         }
     }
