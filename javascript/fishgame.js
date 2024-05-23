@@ -43,7 +43,8 @@ function trackMouse(event) {
     mouseX = event.clientX - canvas.offsetLeft; 
     mouseY = event.clientY - canvas.offsetTop;
     // No need to perform the "collision" check here.
-    
+}
+
 // start animating
 startanimate();
 
@@ -178,4 +179,3 @@ function startanimate() {
         
     }
 
-}
