@@ -25,6 +25,10 @@ var mouseX = 0;
 
 var mouseY = 0;
 
+// Initialize player circle that sticks to mouse
+
+
+
 /*
 function trackMouse (event) {
     //mouseX = event.clientX;
@@ -71,7 +75,7 @@ function spawnRandomObject() {
     }
 
     // create the new object
-    var object = {
+    let object = {
         // set this objects type
         type: t,
         // set spawn randomly on the canvas edge
