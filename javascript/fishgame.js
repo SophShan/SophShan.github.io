@@ -32,7 +32,7 @@ var player = {
         
         y: mouseY,
 
-        radius: 6,
+        radius: 7,
     }
 
 /*
@@ -169,11 +169,12 @@ function startanimate() {
     
     // Use filter method to remove objects that are touched:
     // This should happen before the objects are moved and drawn. 
+    // below needs to be in the animate function so that the check is made at every animation frame, not just when mouse moves
     objects = objects.filter(object => {
-        // Don't divide by 2, as "radius" is actually the radius
-        return !( //object.radius < player.radius 
+        return !( object.radius < player.radius
                  && (Math.abs(object.x - mouseX) <= object.radius) 
                  && (Math.abs(object.y - mouseY) <= object.radius));
+        player.radius += 1;
     });
 
     for (const object of objects) { // Use modern for..of syntax (no need for i)
