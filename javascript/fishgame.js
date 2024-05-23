@@ -29,14 +29,14 @@ function trackMouse (event) {
     //mouseX = event.clientX;
     //mouseY = event.clientY;
     objects.forEach ((object, i) => {
-        if ((Math.abs(object.x - event.clientX) <= object.diameter/2) && (Math.abs(object.y - event.clientY) <= object.diameter/2)) {
+        if ((Math.abs(object.x - event.clientX) <= object.diameter) && (Math.abs(object.y - event.clientY) <= object.diameter)) {
             setTimeout (() => { objects.splice (i, 1) }, 0)
         }
 
     });
 }
     
-
+f
 // start animating
 startanimate();
 
