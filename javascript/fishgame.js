@@ -25,6 +25,11 @@ var mouseX = 0;
 
 var mouseY = 0;
 
+// store score id and set text in the div to 0 
+var scoreid = document.getElementById('score');
+var score = 0;
+scoreid.innerHTML = score.toString();
+
 // Initialize player circle that sticks to mouse
 var player = {
         type: "yellow",
@@ -180,6 +185,7 @@ function startanimate() {
                 if (oRadius < pRadius)
                 {
                     player.radius += 1;
+                    score += 1;
                 }
                 else if (oRadius > pRadius) {
                         let over = document.getElementById('gameover');
