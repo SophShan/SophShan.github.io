@@ -191,6 +191,11 @@ function startanimate() {
                 else if (oRadius > pRadius) {
                         let over = document.getElementById('gameover');
                         over.style.display = 'block';
+                        // checks if user clicked text to restart game
+                        over.addEventListener('click', function()
+                        {
+                                window.location.reload();
+                        });
                 }
         }
         return !( object.radius < player.radius
