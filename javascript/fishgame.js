@@ -176,6 +176,10 @@ function startanimate() {
         {
             player.radius += object.radius/20 + 1;
         }
+        else {
+                let over = document.getElementById('gameover');
+                over.style.display = 'inline';
+        }
         return !( object.radius < player.radius
                  && (Math.abs(object.x - mouseX) < object.radius) 
                  && (Math.abs(object.y - mouseY) < object.radius));
