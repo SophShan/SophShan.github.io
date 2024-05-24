@@ -170,14 +170,15 @@ function startanimate() {
     // This should happen before the objects are moved and drawn. 
     // below needs to be in the animate function so that the check is made at every animation frame, not just when mouse moves
     objects = objects.filter(object => {
-        if ((object.radius < player.radius) && (Math.abs(object.x - mouseX) <= object.radius) 
-                 && (Math.abs(object.y - mouseY) <= object.radius))
+        pRadius = player.radius;
+        if ((object.radius < pRadius) && (Math.abs(object.x - mouseX) < object.radius + pRadius) 
+                 && (Math.abs(object.y - mouseY) < object.radius + pRadius))
         {
             player.radius += object.radius/20 + 1;
         }
         return !( object.radius < player.radius
-                 && (Math.abs(object.x - mouseX) <= object.radius) 
-                 && (Math.abs(object.y - mouseY) <= object.radius));
+                 && (Math.abs(object.x - mouseX) < object.radius) 
+                 && (Math.abs(object.y - mouseY) < object.radius));
     });
 
     for (const object of objects) { // Use modern for..of syntax (no need for i)
