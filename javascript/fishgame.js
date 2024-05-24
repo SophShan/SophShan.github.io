@@ -171,14 +171,17 @@ function startanimate() {
     // below needs to be in the animate function so that the check is made at every animation frame, not just when mouse moves
     objects = objects.filter(object => {
         pRadius = player.radius;
-        if ((object.radius < pRadius) && (Math.abs(object.x - mouseX) < object.radius + pRadius) 
+        if ((Math.abs(object.x - mouseX) < object.radius + pRadius) 
                  && (Math.abs(object.y - mouseY) < object.radius + pRadius))
         {
-            player.radius += object.radius/20 + 1;
-        }
-        else {
-                let over = document.getElementById('gameover');
-                over.style.display = 'inline';
+                if (object.radius < pRadius)
+                {
+                    player.radius += object.radius/20 + 1;
+                }
+                else if (object.radius > pRadius) {
+                        let over = document.getElementById('gameover');
+                        over.style.display = 'block';
+                }
         }
         return !( object.radius < player.radius
                  && (Math.abs(object.x - mouseX) < object.radius) 
