@@ -194,8 +194,8 @@ function startanimate() {
                 }
         }
         return !( object.radius < player.radius
-                 && (Math.abs(object.x - mouseX) < object.radius) 
-                 && (Math.abs(object.y - mouseY) < object.radius));
+                 && (Math.abs(object.x - mouseX) < greaterRadius - minRadius) 
+                 && (Math.abs(object.y - mouseY) < greaterRadius - minRadius));
     });
 
     for (const object of objects) { // Use modern for..of syntax (no need for i)
