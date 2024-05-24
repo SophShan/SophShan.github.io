@@ -8,7 +8,7 @@ var ctx = canvas.getContext("2d");
 var spawnLineY = 25;
 
 // spawn a new object every 500ms
-var spawnRate = 100;
+var spawnRate = 70;
 
 // when was the last object spawned
 var lastSpawn = -1;
@@ -179,7 +179,7 @@ function startanimate() {
         {
                 if (oRadius < pRadius)
                 {
-                    player.radius += object.radius/30 + 1;
+                    player.radius += 1;
                 }
                 else if (oRadius > pRadius) {
                         let over = document.getElementById('gameover');
