@@ -9,17 +9,16 @@
 
   
   <body>
-    <div style= "position:relative"> 
     <canvas id="canvas" width="1000px" height="500px" onmousemove="trackMouse(event)"></canvas>
 
     <!-- must load javascript only after the html so animation can occur in the canvas, uses defer so which says to load it in parallel-->
     <script src="../javascript/fishgame.js" defer></script> 
 
-    <div id="gameover" style= "display:none;position:absolute">
+    <div id="gameover" style= "display:none;">
       <center>
-        <h2 onClick = "window.location.reload()" >You were eaten ... Click to try again! </h2>
+        <h2 onClick = "window.location.reload()" style="text-align: center;">You were eaten ... Click to try again! </h2>
       </center>
     </div>
-    </div>
+  \
   </body>
 </html>
