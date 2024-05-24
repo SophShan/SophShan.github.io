@@ -186,6 +186,7 @@ function startanimate() {
                 {
                     player.radius += 1;
                     score += 1;
+                    scoreid.innerHTML = score.toString();
                 }
                 else if (oRadius > pRadius) {
                         let over = document.getElementById('gameover');
