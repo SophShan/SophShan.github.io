@@ -189,13 +189,14 @@ function startanimate() {
                     scoreid.innerHTML = score.toString();
                 }
                 else if (oRadius > pRadius) {
-                        let over = document.getElementById('gameover');
-                        over.style.display = 'block';
+                         ctx.fillText("Hello world", canvas.width/2, canvas.height/2);
+                        //let over = document.getElementById('gameover');
+                        //over.style.display = 'block';
                         // checks if user clicked text to restart game
-                        over.addEventListener('click', function()
-                        {
-                                window.location.reload();
-                        });
+                        //over.addEventListener('click', function()
+                        //{
+                               // window.location.reload();
+                        //});
                 }
         }
         return !( object.radius < player.radius
