@@ -9,7 +9,7 @@
 
   
   <body>
-    <canvas id="canvas" width="1000px" height="500px" onmousemove="trackMouse(event)"></canvas>
+    <canvas id="canvas" width="1000px" height="500px" style="z-index:1;" onmousemove="trackMouse(event)"></canvas>
 
     <!-- must load javascript only after the html so animation can occur in the canvas, uses defer so which says to load it in parallel-->
     <script src="../javascript/fishgame.js" defer></script> 
