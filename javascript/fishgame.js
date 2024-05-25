@@ -189,6 +189,7 @@ function startanimate() {
                     scoreid.innerHTML = score.toString();
                 }
                 else if (oRadius > pRadius) {
+                         ctx.font = "48px serif";
                          ctx.fillText("Hello world", canvas.width/2, canvas.height/2);
                         //let over = document.getElementById('gameover');
                         //over.style.display = 'block';
