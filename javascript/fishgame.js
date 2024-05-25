@@ -191,10 +191,10 @@ function startanimate() {
                 else if (oRadius > pRadius) {
                          ctx.font = "40px serif";
                          ctx.fillText = "white";
-                         ctx.strokeText("Hello world", canvas.width/2 - canvas.offsetLeft, canvas.height/2 - canvas.offsetLeft); // white filling
+                         ctx.strokeText("Hello world", canvas.width/2 - canvas.offsetLeft, canvas.height/2 - canvas.offsetTop); // white filling
                         
                          ctx.fillStyle = "black";
-                         ctx.strokeText("Hello world", canvas.width/2 - canvas.offsetLeft, canvas.height/2 - canvas.offsetLeft); // black outline
+                         ctx.strokeText("Hello world", canvas.width/2 - canvas.offsetLeft, canvas.height/2 - canvas.offsetTop); // black outline
                         //let over = document.getElementById('gameover');
                         //over.style.display = 'block';
                         // checks if user clicked text to restart game
