@@ -195,6 +195,11 @@ function startanimate() {
                         
                          ctx.fillStyle = "black";
                          ctx.strokeText("Hello world", (canvas.width - canvas.offsetLeft)/2, (canvas.height/2 - canvas.offsetTop)/2 ); // black outline
+                        
+                        // clear the canvas 
+                        ctx.clearRect(0, 0, canvas.width, canvas.height);
+                        break;
+                        
                         //let over = document.getElementById('gameover');
                         //over.style.display = 'block';
                         // checks if user clicked text to restart game
