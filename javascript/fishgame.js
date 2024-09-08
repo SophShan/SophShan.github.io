@@ -25,6 +25,8 @@ var mouseX = 0;
 
 var mouseY = 0;
 
+var checkGameOver = 0;
+
 // store score id and set text in the div to 0 
 var scoreid = document.getElementById('score');
 var score = 0;
@@ -182,24 +184,24 @@ function startanimate() {
         if ((Math.abs(object.x - mouseX) < greaterRadius - minRadius) 
                  && (Math.abs(object.y - mouseY) < greaterRadius - minRadius))
         {
-                if (oRadius < pRadius)
+                if (oRadius < pRadius && checkGameOver != 1)
                 {
                     player.radius += 1;
                     score += 1;
                     scoreid.innerHTML = score.toString();
                 }
                 else if (oRadius > pRadius) {
-                        while (true){
-                         ctx.font = "60px serif";
-                         ctx.fillText = "white";
-                         ctx.strokeText("Game Over", (canvas.width - canvas.offsetLeft)/2, (canvas.height/2 - canvas.offsetTop)/2 ); // white filling
+                        showGameOver();
+                         //ctx.font = "60px serif";
+                         //ctx.fillText = "white";
+                         //ctx.strokeText("Game Over", (canvas.width - canvas.offsetLeft)/2, (canvas.height/2 - canvas.offsetTop)/2 ); // white filling
                         
-                         ctx.fillStyle = "black";
-                         ctx.strokeText("Gameover", (canvas.width - canvas.offsetLeft)/2, (canvas.height/2 - canvas.offsetTop)/2 ); // black outline
-                        }
+                         //ctx.fillStyle = "black";
+                         //ctx.strokeText("Gameover", (canvas.width - canvas.offsetLeft)/2, (canvas.height/2 - canvas.offsetTop)/2 ); // black outline
+                
                         // clear the canvas 
-                        ctx.clearRect(0, 0, canvas.width, canvas.height);
-                        break;
+                        //ctx.clearRect(0, 0, canvas.width, canvas.height);
+                        //break;
                         
                         //let over = document.getElementById('gameover');
                         //over.style.display = 'block';
@@ -236,5 +238,6 @@ function showGameOver(){
     var gameOvertext = document.getElementById('gameover');
     //show text
     gameOvertext.style.display = 'block';
+    checkGameOver = 1;
 }
 
