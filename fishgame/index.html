@@ -11,10 +11,8 @@
   <body>
     <!-- Game Over Text-->
     <div id="gameover" style= "display:none;" onClick="window.location.reload()">
-       <center>
          <!-- position absolute with z-index to make text appear over canvas -->
-        <h1 style="text-align: center; padding-top:250;position: absolute;z-index:100">You were eaten ... Click to try again! </h1>
-      </center>
+        <h1 style="text-align: center; padding-top:200;position: absolute;z-index:100">You were eaten ... Click to try again! </h1>
     </div>
     
     <canvas id="canvas" width="1000px" height="500px" style="z-index:1;" onmousemove="trackMouse(event)"></canvas>
@@ -31,7 +29,7 @@
 
   <div>
     <center>
-      <h3>Move your mouse and avoid getting eaten by bigger circles! Drag your mouse over smaller circles to eat them and grow bigger!</h3>
+      <h3 style="text-align: center;">Move your mouse and avoid getting eaten by bigger circles! Drag your mouse over smaller circles to eat them and grow bigger!</h3>
     </center>
   </div>
   </body>
