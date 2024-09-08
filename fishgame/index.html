@@ -9,6 +9,13 @@
 
   
   <body>
+    <!-- Game Over Text-->
+    <div id="gameover" style= "display:none;" onClick="window.location.reload()">
+       <center>
+        <h1 style="text-align: center; padding-top:250;z-index:100">You were eaten ... Click to try again! </h1>
+      </center>
+    </div>
+    
     <canvas id="canvas" width="1000px" height="500px" style="z-index:1;" onmousemove="trackMouse(event)"></canvas>
 
     <!-- must load javascript only after the html so animation can occur in the canvas, uses defer so which says to load it in parallel-->
@@ -21,12 +28,6 @@
       
     </div>
 
-    <!-- Game Over Text-->
-    <div id="gameover" style= "display:none;" onClick="window.location.reload()">
-       <center>
-        <h1 style="text-align: center; padding-top:250;z-index:100">You were eaten ... Click to try again! </h1>
-      </center>
-    </div>
 
   <h3>Move your mouse and avoid getting eaten by bigger circles! Drag your mouse over smaller circles to eat them and grow bigger!</h3>
   </body>
