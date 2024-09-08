@@ -232,3 +232,9 @@ function startanimate() {
         ctx.fill();
     }
 
+function showGameOver(){
+    var gameOvertext = document.getElementById('gameover');
+    //show text
+    gameOvertext.style.display = 'block';
+}
+
