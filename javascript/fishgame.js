@@ -189,13 +189,14 @@ function startanimate() {
                     scoreid.innerHTML = score.toString();
                 }
                 else if (oRadius > pRadius) {
-                         ctx.font = "40px serif";
+                        while (true){
+                         ctx.font = "60px serif";
                          ctx.fillText = "white";
-                         ctx.strokeText("Hello world", (canvas.width - canvas.offsetLeft)/2, (canvas.height/2 - canvas.offsetTop)/2 ); // white filling
+                         ctx.strokeText("Game Over", (canvas.width - canvas.offsetLeft)/2, (canvas.height/2 - canvas.offsetTop)/2 ); // white filling
                         
                          ctx.fillStyle = "black";
-                         ctx.strokeText("Hello world", (canvas.width - canvas.offsetLeft)/2, (canvas.height/2 - canvas.offsetTop)/2 ); // black outline
-                        
+                         ctx.strokeText("Gameover", (canvas.width - canvas.offsetLeft)/2, (canvas.height/2 - canvas.offsetTop)/2 ); // black outline
+                        }
                         // clear the canvas 
                         ctx.clearRect(0, 0, canvas.width, canvas.height);
                         break;
