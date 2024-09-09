@@ -9,13 +9,6 @@
 
   
   <body>
-    <!-- Game Over Text-->
-    <center>
-    <div id="gameover" style= "display:none;width:50%;height:50%" onClick="window.location.reload()">
-         <!-- position absolute with z-index to make text appear over canvas -->
-        <h1 style="position: absolute;z-index:100;">You were eaten ... Click here to try again! </h1>
-    </div>
-    </center>
     
     <canvas id="canvas" width="1000px" height="500px" style="z-index:1;" onmousemove="trackMouse(event)"></canvas>
 
@@ -28,6 +21,14 @@
       <h1 style="display: inline;" id="score"> </h1>
       
     </div>
+
+  <!-- Game Over Text-->
+    <center>
+    <div id="gameover" style= "display:none;width:50%;height:50%" onClick="window.location.reload()">
+         <!-- position absolute with z-index to make text appear over canvas -->
+        <h1 style="position: absolute;z-index:100;">You were eaten ... Click here to try again! </h1>
+    </div>
+    </center>
 
   <div>
     <center>
