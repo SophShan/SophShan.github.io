@@ -10,12 +10,12 @@
   
   <body>
     <!-- Game Over Text-->
+    <center>
     <div id="gameover" style= "display:none;" onClick="window.location.reload()">
          <!-- position absolute with z-index to make text appear over canvas -->
-      <center>
         <h1 style="position: absolute;z-index:100;padding-top:50%;padding-right:50%;">You were eaten ... Click to try again! </h1>
-      </center>
     </div>
+    </center>
     
     <canvas id="canvas" width="1000px" height="500px" style="z-index:1;" onmousemove="trackMouse(event)"></canvas>
 
