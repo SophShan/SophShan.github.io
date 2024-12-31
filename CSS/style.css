@@ -8,7 +8,7 @@
 }
 
 .topnav {
-  background-color: #fff;
+  background-color: ##152A4D; /** was fff **/
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
   position: fixed;
   width: 100%;
@@ -40,7 +40,7 @@
 /* buttons */
 
 .button {
-  background-color: #4CAF50; /* Green */
+  background-color: #152A4D /* #4CAF50; Green */
   border: none;
   color: black;
   padding: 2px 10px;
