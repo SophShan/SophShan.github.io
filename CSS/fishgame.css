@@ -1,5 +1,5 @@
 body {
-        background-color: ivory;
+        background-color: 000068;
     }
 
 h1 {
@@ -11,7 +11,7 @@ h2 {
 }
 
 #canvas {
-    border:5px solid red;
+    border:5px solid white;
     //display: block;
     padding: 0;
     margin: auto;
