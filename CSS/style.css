@@ -1,10 +1,9 @@
 /* Nav bar */
 
 #home {
-    background: url("https://wallpapercave.com/wp/wp11151731.jpg") center/cover no-repeat;
-    padding: 130px 50px 50px 50px;
-    text-align: center;
-    class="active"
+    width: 100vw;    
+    height: 100vh;    
+    background-color: #000068; 
 }
 
 .topnav {
