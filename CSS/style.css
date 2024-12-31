@@ -8,7 +8,7 @@
 }
 
 .topnav {
-  background-color: ##152A4D; /** was fff **/
+  background-color: #000068; /** was fff **/
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
   position: fixed;
   width: 100%;
@@ -20,7 +20,7 @@
 
 .topnav a {
   float: right;
-  color: #000;
+  color: #fff;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -33,7 +33,7 @@
 }
 
 .topnav a.active {
-  background-color: #91A488;
+  background-color: #152A4D;
   color: white;
 }
 
@@ -112,6 +112,7 @@
 body {
   margin: 0;
   box-sizing: border-box;
+  background-color: #000068;
 }
 
 /* CSS for header */
