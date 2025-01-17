@@ -1,3 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import "../App.css";
+
 interface Props {
   title: string;
   desc: string;
@@ -13,9 +17,11 @@ const ProjectCard = ({ title, desc, buttonName, imgName, link }: Props) => {
         className="card"
         style={
           {
-            width: "22rem",
-            "margin-top": "50px",
-            padding: "5px",
+            width: "30rem",
+            "margin-top": "5rem",
+            padding: "0rem",
+
+            "background-color": "#152A4D",
           } as React.CSSProperties
         }
       >
@@ -24,11 +30,27 @@ const ProjectCard = ({ title, desc, buttonName, imgName, link }: Props) => {
           className="card-img-top"
           alt={title}
         />
-        <div className="card-body">
+        <div
+          className="card-body "
+          style={
+            {
+              "background-color": "#152A4D",
+            } as React.CSSProperties
+          }
+        >
           <h5 className="card-title">{title}</h5>
-          <p className="card-text">{desc}</p>
-          <a href={link} className="btn btn-primary">
-            {buttonName}
+          <p
+            className="card-text"
+            style={
+              {
+                color: "white",
+              } as React.CSSProperties
+            }
+          >
+            {desc}
+          </p>
+          <a href={link} className="btnBase">
+            {buttonName} <FontAwesomeIcon icon={faGithub} />
           </a>
         </div>
       </div>
