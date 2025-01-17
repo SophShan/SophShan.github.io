@@ -2,13 +2,24 @@
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
-  
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #0b0c3e;
-  
+
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  
+  /* CSS */
+  .btnBase {
+    background-color: #0B192E;
+    border: 0.08rem solid white;  /* Directly define border to check visibility */
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 10px 16px;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 0.5rem;
+  }
+
+  .btnBase:hover { border-width: 0.12rem; }

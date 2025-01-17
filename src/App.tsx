@@ -14,10 +14,11 @@ function App() {
         style={
           {
             width: "100%",
-            "background-color": "#0b0c3e",
+            "background-color": "#0B192E",
             display: "flex",
             "justify-content": "center",
             "flex-wrap": "wrap",
+            "grid-column-gap": "1.5rem",
           } as React.CSSProperties
         }
       >
