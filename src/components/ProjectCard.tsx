@@ -34,7 +34,7 @@ const ProjectCard = ({ title, desc, buttonName, imgName, link }: Props) => {
           className="card-body "
           style={
             {
-              "background-color": "#152A4D",
+              "background-color": "#123146",
             } as React.CSSProperties
           }
         >

@@ -2,6 +2,8 @@ import Header from "./components/Header";
 import Nav from "./components/Nav";
 import ProjectCard from "./components/ProjectCard";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 function App() {
   return (
@@ -14,7 +16,7 @@ function App() {
         style={
           {
             width: "100%",
-            "background-color": "#0B192E",
+            "background-color": "#071D29",
             display: "flex",
             "justify-content": "center",
             "flex-wrap": "wrap",
@@ -22,7 +24,7 @@ function App() {
           } as React.CSSProperties
         }
       >
-        <div className="g-col-6 g-col-md-4">
+        <div id="Projects" className="g-col-6 g-col-md-4">
           {" "}
           <ProjectCard
             title="To Do App"

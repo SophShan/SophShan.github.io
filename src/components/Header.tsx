@@ -1,10 +1,12 @@
-const Header = () => {
+import "../App.css";
+
+let fullName = "Sophia Shantharupan";
+
+const Header: React.FC = () => {
   return (
-    <img
-      src="/docs/assets/sagegreen.jpg"
-      className="img-fluid"
-      alt="Header Image"
-    ></img>
+    <header className="header">
+      <h1 className="headerName"> {fullName} </h1>
+    </header>
   );
 };
 
