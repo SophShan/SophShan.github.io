@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 const Nav = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg custNav">
       <div className="container-fluid">
-        <a className="navbar-brand" href="sophshan.github.io">
-          Navbar
+        <a className="navbar-brand" href="#" style={{ color: "white" }}>
+          Sophia Shantharpuan
         </a>
         <button
           className="navbar-toggler"
@@ -18,19 +20,19 @@ const Nav = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-link" href="#">
+            <li className="nav-item ">
+              <a
+                className="nav-link"
+                aria-current="page"
+                href="#Projects"
+                style={{ color: "white" }}
+              >
                 Projects
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Skills
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Contact
+              <a className="nav-link" href="#" style={{ color: "white" }}>
+                Link
               </a>
             </li>
           </ul>
@@ -41,7 +43,11 @@ const Nav = () => {
               placeholder="Search"
               aria-label="Search"
             />
-            <button className="btn btn-outline-success" type="submit">
+            <button
+              className="btn btn-outline-success"
+              type="submit"
+              style={{ color: "white" }}
+            >
               Search
             </button>
           </form>
