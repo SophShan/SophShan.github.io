@@ -38,7 +38,9 @@ const ProjectCard = ({ title, desc, buttonName, imgName, link }: Props) => {
             } as React.CSSProperties
           }
         >
-          <h5 className="card-title">{title}</h5>
+          <h5 className="card-title" style={{ color: "white" }}>
+            {title}
+          </h5>
           <p
             className="card-text"
             style={
