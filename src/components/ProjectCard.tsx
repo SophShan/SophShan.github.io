@@ -49,7 +49,7 @@ const ProjectCard = ({ title, desc, buttonName, imgName, link }: Props) => {
           >
             {desc}
           </p>
-          <a href={link} className="btnBase">
+          <a href={link} className="btnBase" target="_blank">
             {buttonName} <FontAwesomeIcon icon={faGithub} />
           </a>
         </div>
