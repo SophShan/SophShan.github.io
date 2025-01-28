@@ -1,0 +1,28 @@
+body {
+        background-color: #000068;
+    }
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+}
+
+#canvas {
+    border:5px solid white;
+    //display: block;
+    padding: 0;
+    margin: auto;
+    //display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    }
+    
+
