@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta charset="UTF-8"> <! --- To establish proper website layout and properties--->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- href is case sensitive -->
+    <link rel="stylesheet" href="./fishgame.css">
+  </head>
+
+  
+  <body>
+    
+    <canvas id="canvas" width="1000px" height="500px" style="z-index:1;" onmousemove="trackMouse(event)"></canvas>
+
+    <!-- must load javascript only after the html so animation can occur in the canvas, uses defer so which says to load it in parallel-->
+    <script src="./fishgame.js" defer></script> 
+
+    <!-- Score -->
+    <div style= "text-align:center">
+      <h1 style="display: inline;"> Score: </h1>
+      <h1 style="display: inline;" id="score"> </h1>
+      
+    </div>
+
+  <!-- Game Over Text-->
+    <center>
+    <div id="gameover" style= "text-align: center;display:none;padding-left:410;padding-top:275;position: absolute;z-index:100;" onClick="window.location.reload()">
+         <!-- position absolute with z-index to make text appear over canvas -->
+        <h1>You were eaten ... Click here to try again! </h1>
+    </div>
+    </center>
+
+  <div style="text-align: center;" >
+      <h2 style="text-align: center; padding-top:570;position: absolute;">Move your mouse and avoid getting eaten by bigger circles! Drag your mouse over smaller circles to eat them and grow bigger!</h3>
+  </div>
+  </body>
+</html>
