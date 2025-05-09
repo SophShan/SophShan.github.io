@@ -1,11 +1,11 @@
 {
   "name": "personal-website",
-  "description": "Benjamin's Personal Website",
+  "description": "Sophia's Personal Website",
   "version": "1.0.0",
-  "author": "Benjamin Kostiuk <benkostiuk1@gmail.com>",
+  "author": "Sophia Shantharupan <sophiashanthan@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/benjaminkostiuk/benjaminkostiuk.github.io"
+    "url": "https://github.com/SophShan/SophShan.github.io"
   },
   "keywords": [
     "gatsby"
