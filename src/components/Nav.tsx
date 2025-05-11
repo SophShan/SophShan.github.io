@@ -1,9 +1,11 @@
+const navTextColour = "#EDD9C7";
+
 const Nav = () => {
   return (
     <nav className="navbar navbar-expand-lg custNav">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#" style={{ color: "white" }}>
-          Sophia Shantharpuan
+        <a className="navbar-brand" href="#" style={{ color: navTextColour }}>
+          Sophia Shantharupan
         </a>
         <button
           className="navbar-toggler"
@@ -23,17 +25,22 @@ const Nav = () => {
                 className="nav-link"
                 aria-current="page"
                 href="#Projects"
-                style={{ color: "white" }}
+                style={{ color: navTextColour }}
               >
                 Projects
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#" style={{ color: "white" }}>
-                Link
+              <a
+                className="nav-link"
+                href="#Contact"
+                style={{ color: navTextColour }}
+              >
+                Contact Me
               </a>
             </li>
           </ul>
+          {/*
           <form className="d-flex" role="search">
             <input
               className="form-control me-2"
@@ -49,6 +56,7 @@ const Nav = () => {
               Search
             </button>
           </form>
+          */}
         </div>
       </div>
     </nav>

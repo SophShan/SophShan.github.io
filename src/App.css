@@ -10,19 +10,20 @@
 
   .btnBase {
     background-color: #071D29;
-    border: 0.08rem solid white;  /* Directly define border to check visibility */
+    border: 0.08rem solid #EDD9C7;  /* Directly define border to check visibility */
     color: #FFFFFF;
     cursor: pointer;
     padding: 10px 16px;
     display: inline-block;
     text-decoration: none;
     border-radius: 0.5rem;
+    margin: 0rem 1rem 0rem 1rem;
   }
 
   .btnBase:hover { border-width: 0.12rem; }
 
   .header{
-    background: url("/docs/assets/galaxy.webp") no-repeat center center/cover;
+    background: url("/assets/galaxy.webp") no-repeat center center/cover;
     width: 100%;
     height: 45rem;
   }
@@ -40,7 +41,35 @@
 
   }
 
-  .custNav {
-    background-color: #123146;
-    color: white;
+  .contactName{
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'Varela Round';
+    color: #EDD9C7;
+    text-shadow: -0px -0px 0 #000, 1px -0px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   }
+
+  .custNav {
+    background-color: #021C27;
+    color: #EDD9C7;
+  }
+
+  .card:hover{
+    border: 0.5rem solid white; 
+    box-shadow: 0 0 17px #EDD9C7;
+    border-radius: 25rem;
+  
+  }
+.skill {
+  margin: 0.2rem;
+  border: 0.06rem solid rgb(0, 0, 0); 
+  background-color: #EDD9C7 !important;
+  color: black;
+}
+
+.center {
+  display: "flex";
+  justifyContent: "center";
+  alignItems: "center";
+  height: "100vh";
+}

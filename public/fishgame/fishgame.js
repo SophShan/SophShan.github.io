@@ -39,7 +39,7 @@ var player = {
         
         y: 0,
 
-        radius: 7,
+        radius: 7.5,
     }
 
 /*
